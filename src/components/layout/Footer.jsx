@@ -119,8 +119,8 @@ const Footer = () => {
                 <FaEnvelope className="text-green-400 mt-1" />
 
                 <span className="text-gray-300 text-sm break-all">
-                  {/* risenlaboratoriespvltd@gmail.com */}
-                  Ajitkr@2740@gmail.com
+                  risenlaboratoriespvltd@gmail.com
+                
                 </span>
 
               </div>
@@ -130,8 +130,8 @@ const Footer = () => {
                 <FaBuilding className="text-green-400 mt-1" />
 
                 <span className="text-gray-300 text-sm">
-                  {/* CIN : U47721DL2026PTC467121 */}
-                  CIN: A5367GHTYBAJ6862
+                  CIN : U47721DL2026PTC467121
+                  
                 </span>
 
               </div>
@@ -161,13 +161,13 @@ const Footer = () => {
                   </h4>
 
                   <p className="text-gray-300 text-sm leading-6 mt-2">
-                    {/* 400-A, 4th Floor,
+                    400-A, 4th Floor,
                     12 Ajit Singh House,
                     Yusuf Sarai Commercial Complex,
                     Near Green Park Metro Station Exit-2,
                     Green Park,
-                    New Delhi - 110016 */}
-                    234-A, 2th Flooer Lalpur ranchi
+                    New Delhi - 110016
+                    
                   </p>
 
                 </div>

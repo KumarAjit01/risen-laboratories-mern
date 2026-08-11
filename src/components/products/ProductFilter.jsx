@@ -1,30 +1,89 @@
-const ProductFilter = () => {
+import {
+  FaLayerGroup,
+  FaTablets,
+  FaCapsules,
+  FaFlask,
+  FaSyringe,
+} from "react-icons/fa";
+
+const ProductFilter = ({
+  activeCategory,
+  onCategoryChange,
+}) => {
+  const categories = [
+    {
+      name: "All",
+      icon: FaLayerGroup,
+    },
+    {
+      name: "Tablets",
+      icon: FaTablets,
+    },
+    {
+      name: "Capsules",
+      icon: FaCapsules,
+    },
+    {
+      name: "Syrups",
+      icon: FaFlask,
+    },
+    {
+      name: "Nutraceuticals",
+      icon: FaCapsules,
+    },
+    {
+      name: "Injection",
+      icon: FaSyringe,
+    },
+  ];
+
   return (
-    <section className="py-10 bg-white">
+    <section className="bg-white py-10">
 
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
 
-        <div className="flex flex-wrap gap-4 justify-center">
+        <div className="flex justify-center">
 
-          <button className="bg-blue-700 text-white px-6 py-3 rounded-full">
-            All
-          </button>
+          <div className="flex gap-3 overflow-x-auto pb-2 max-w-full">
 
-          <button className="border px-6 py-3 rounded-full hover:bg-blue-700 hover:text-white transition">
-            Tablets
-          </button>
+            {categories.map((category) => {
+              const Icon = category.icon;
 
-          <button className="border px-6 py-3 rounded-full hover:bg-blue-700 hover:text-white transition">
-            Capsules
-          </button>
+              const active =
+                activeCategory === category.name;
 
-          <button className="border px-6 py-3 rounded-full hover:bg-blue-700 hover:text-white transition">
-            Syrups
-          </button>
+              return (
+                <button
+                  key={category.name}
+                  type="button"
+                  onClick={() =>
+                    onCategoryChange(category.name)
+                  }
+                  className={`
+                    flex items-center gap-2
+                    px-6 py-3
+                    rounded-full
+                    border
+                    whitespace-nowrap
+                    font-semibold
+                    text-sm
+                    transition-all
+                    duration-300
+                    ${
+                      active
+                        ? "bg-blue-700 text-white border-blue-700 shadow-lg shadow-blue-700/25"
+                        : "bg-white text-slate-700 border-slate-200 hover:border-blue-400 hover:text-blue-700 hover:bg-blue-50"
+                    }
+                  `}
+                >
+                  <Icon className="text-sm" />
 
-          <button className="border px-6 py-3 rounded-full hover:bg-blue-700 hover:text-white transition">
-            Injection
-          </button>
+                  {category.name}
+                </button>
+              );
+            })}
+
+          </div>
 
         </div>
 

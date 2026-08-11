@@ -10,9 +10,14 @@ import Contact from "./pages/Contact/Contact";
 import Gallery from "./pages/Gallery/Gallery";
 import Career from "./pages/Career/Career";
 
+import ScrollToTop from "./components/common/ScrollToTop";
+
 function App() {
   return (
     <BrowserRouter>
+
+      {/* Route change par page top par jayega */}
+      <ScrollToTop />
 
       <Routes>
 
